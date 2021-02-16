@@ -1,0 +1,24 @@
+$bg: #F6F6F6;
+$accentColor: #F53838;
+$mainText: #0B132A;
+$subText: #4F5665;
+@mixin rubik-bold {
+    font-family: 'Rubik-Bold', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin rubik-medium {
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin rubik-regular {
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

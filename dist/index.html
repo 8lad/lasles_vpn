@@ -1,17 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/libs.min.css"/>
-    <link rel="stylesheet" href="css/style.min.css"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image.png"/>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image.png">
   </head>
   <body>
     <div class="wrapper">
-      <div class="content"></div>
+      <div class="content">
+        <header class="header">
+          <div class="container">
+            <div class="header__inner">
+              <div class="haeder__logo"><img src="images/logo.png" alt="logo"></div>
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="#">About</a></li>
+                  <li class="menu__item"><a href="#">Features</a></li>
+                  <li class="menu__item"><a href="#">Pricing</a></li>
+                  <li class="menu__item"><a href="#">Testimonials</a></li>
+                  <li class="menu__item"><a href="#">Help</a></li>
+                </ul>
+              </nav>
+              <div class="header__sign">
+                <button class="header__sign-in">Sign In</button>
+                <button class="header__sign-up action__btn">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container">
+            <div class="main__inner">
+              <div class="main__text">
+                <h1 class="main__title">Want anything to be easy with <span>LaslesVPN.</span></h1>
+                <div class="main__descr">Provide a network for all your needs with ease and fun using <span>LaslesVPN </span>discover interesting features from us.</div>
+                <button class="start__button main__button">Get Started</button>
+              </div>
+              <div class="main__img"><img src="images/main.png" alt="main img"></div>
+            </div>
+          </div>
+        </main>
+        <section class="statistic">
+          <div class="container">
+            <div class="statistic__inner">
+              <div class="statistic__item"><img class="statistic__img" src="images/user.svg" alt="user icon">
+                <div class="statistic__text"><span class="statistic__number">90+</span><span class="statistic__point">Users</span></div>
+              </div>
+              <div class="statistic__item"><img class="statistic__img" src="images/checkpoint.svg" alt="checkpoint icon">
+                <div class="statistic__text"><span class="statistic__number">30+</span><span class="statistic__point">Locations</span></div>
+              </div>
+              <div class="statistic__item"><img class="statistic__img" src="images/server.svg" alt="server icon">
+                <div class="statistic__text"><span class="statistic__number">50+</span><span class="statistic__point">Servers</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features"> 
+          <div class="container"> 
+            <div class="features__inner"> 
+              <div class="features__img"><img src="images/features.png" alt="man works with a laptop"></div>
+              <div class="features__text"> 
+                <h3 class="section__title">We Provide Many Features You Can Use</h3>
+                <p class="section__descr">You can explore the features that we provide with fun and have their own functions each feature.</p>
+                <ul class="features__list">
+                  <li>Powerfull online protection.</li>
+                  <li>Internet without borders.</li>
+                  <li>Supercharged VPN</li>
+                  <li>No specific time limits.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="plan"> 
+          <div class="container"> 
+            <div class="plan__inner">
+              <h3 class="section__title block-center"> Choose Your Plan</h3>
+              <p class="section__descr block-center">  Let's choose the package that is best for you and explore it happily and cheerfully.</p>
+              <div class="plan__items"> 
+                <div class="plan__item">
+                  <div class="plan__item-img block-center"><img src="images/plan-box.png" alt="box with gifts"></div>
+                  <div class="plan__item-title">Free Plan</div>
+                  <ul class="plan__item-list">
+                    <li>Unlimited Bandwitch</li>
+                    <li>Encrypted Connection</li>
+                    <li>No Traffic Logs</li>
+                    <li>Works on All Devices</li>
+                  </ul>
+                  <div class="plan__item-price"> 
+                    <div class="plan__item-cost"> <span class="plan__item-value">Free</span><span class="plan__item-time"> </span></div>
+                    <button class="action__btn plan__item-button">Select </button>
+                  </div>
+                </div>
+                <div class="plan__item">
+                  <div class="plan__item-img block-center"><img src="images/plan-box.png" alt="box with gifts"></div>
+                  <div class="plan__item-title">Standard Plan</div>
+                  <ul class="plan__item-list">
+                    <li>Unlimited Bandwitch</li>
+                    <li>Encrypted Connection</li>
+                    <li>Yes Traffic Logs</li>
+                    <li>Works on All Devices</li>
+                    <li>Connect Anyware</li>
+                  </ul>
+                  <div class="plan__item-price"> 
+                    <div class="plan__item-cost"> <span class="plan__item-value">$9 </span><span class="plan__item-time">/ mo</span></div>
+                    <button class="action__btn plan__item-button">Select</button>
+                  </div>
+                </div>
+                <div class="plan__item">
+                  <div class="plan__item-img block-center"><img src="images/plan-box.png" alt="box with gifts"></div>
+                  <div class="plan__item-title">Premium Plan</div>
+                  <ul class="plan__item-list">
+                    <li>Unlimited Bandwitch</li>
+                    <li>Encrypted Connection</li>
+                    <li>Yes Traffic Logs</li>
+                    <li>Works on All Devices </li>
+                    <li>Connect Anyware</li>
+                    <li>Get New Features</li>
+                  </ul>
+                  <div class="plan__item-price"> 
+                    <div class="plan__item-cost"> <span class="plan__item-value">$12 </span><span class="plan__item-time">/ mo</span></div>
+                    <button class="action__btn plan__item-button">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <div class="footer"></div>
     </div>
     <script src="js/jquery.js"></script>

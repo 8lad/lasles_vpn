@@ -1,3 +1,4 @@
+@import 'vars';
 html {
     box-sizing: border-box;
 }
@@ -28,7 +29,12 @@ body {
     flex: 0 0 auto;
 }
 
-body {}
+body {
+    @include rubik-regular;
+    color: $subText;
+    font-size: 16px;
+    line-height: 30px;
+}
 
 a {
     display: inline-block;
@@ -44,8 +50,13 @@ li {
     list-style: none;
 }
 
+img {
+    width: 100%;
+}
+
 .container {
     margin: 0 auto;
+    max-width: 1170px;
 }
 
 .container-fluide {}
@@ -62,4 +73,57 @@ input,
 span {
     margin: 0;
     padding: 0;
+}
+
+button {
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+// main styles 
+.action__btn {
+    color: $accentColor;
+    border: 1px solid $accentColor;
+    border-radius: 50px;
+    transition: all .5s;
+    &:hover {
+        color: #fff;
+        background-color: $accentColor;
+    }
+}
+
+.start__button {
+    color: #fff;
+    background-color: $accentColor;
+    border-radius: 10px;
+    @include rubik-bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 17px 78px;
+    box-shadow: 1px 17px 24px -3px rgba($accentColor, 0.39);
+    transition: all .5s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.section__title {
+    @include rubik-medium;
+    font-size: 35px;
+    line-height: 50px;
+    color: $mainText;
+    max-width: 390px;
+    margin-bottom: 20px;
+}
+
+.section__descr {
+    margin-bottom: 20px;
+}
+
+.block-center {
+    margin-left: auto;
+    margin-right: auto;
 }
