@@ -140,6 +140,10 @@
 .features {
     padding-top: 96px;
     padding-bottom: 120px;
+    .section__descr,
+    .section__title {
+        text-align: left;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -187,10 +191,6 @@
     padding-bottom: 70px;
     .section__descr {
         max-width: 555px;
-        text-align: center;
-    }
-    .section__title {
-        text-align: center;
     }
     &__items {
         padding-top: 40px;
@@ -277,4 +277,29 @@
 }
 
 // end plan
+// start network
+.network {
+    padding-top: 70px;
+    background: linear-gradient(180deg, rgba(254, 254, 254, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    .section__descr {
+        margin-bottom: 155px;
+    }
+    &__img {
+        position: relative;
+    }
+    &__img-main,
+    &__img-mobile {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    &__img-mobile {
+        display: none;
+    }
+    &__slider-item {
+        max-width: 190px;
+        margin: 10px;
+    }
+}
+
+// end network
 @import 'media';
