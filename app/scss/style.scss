@@ -285,15 +285,10 @@
         margin-bottom: 155px;
     }
     &__img {
-        position: relative;
+        margin-bottom: 77px;
     }
-    &__img-main,
-    &__img-mobile {
-        width: 100%;
-        margin-bottom: 80px;
-    }
-    &__img-mobile {
-        display: none;
+    &__slider {
+        margin-bottom: 60px;
     }
     &__slider-item {
         max-width: 190px;
@@ -302,4 +297,193 @@
 }
 
 // end network
+// start customers
+.customers {
+    padding-top: 60px;
+    &__slider {
+        padding-top: 40px;
+    }
+    &__slide {
+        padding: 30px;
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        transition: all .3s;
+        max-width: 400px;
+        min-height: 230px;
+        width: 100%;
+        &:hover {
+            border: 2px solid $accentColor;
+        }
+    }
+    &__person {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 50px;
+        position: relative;
+        margin-bottom: 5px;
+    }
+    &__img {
+        max-width: 50px;
+        margin-right: 20px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    &__person {
+        span {
+            display: block;
+        }
+    }
+    &__name {
+        @include rubik-medium;
+        font-size: 18px;
+        line-height: 22px;
+        color: $mainText;
+    }
+    &__place {
+        @include rubik-regular;
+        font-size: 14px;
+        line-height: 18px;
+        color: #4F5665;
+    }
+    &__rate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    &__number {
+        margin-right: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__star {
+        max-width: 16px;
+        width: 100%;
+    }
+    &__comment {
+        color: $mainText;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    ul.slick-dots {
+        display: flex;
+        justify-content: flex-start;
+        .presentation button {
+            font-size: 0px;
+            height: 0;
+        }
+    }
+}
+
+// end customers
+// start subscribe
+.subscribe {
+    transform: translateY(50%);
+    .start__button {
+        padding: 17px 65px;
+    }
+    .section__descr,
+    .section__title {
+        margin-bottom: 0;
+    }
+    .section__title {
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+    &__inner {
+        background-color: #fff;
+        box-shadow: -2px -22px 50px -30px rgba(0, 0, 0, 0.21), -1px 25px 50px -30px rgba(0, 0, 0, 0.21);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 52px 70px;
+        .section__title,
+        .section__descr {
+            text-align: left;
+        }
+    }
+}
+
+// end subcsrube
+// start footer
+.footer {
+    padding-top: 185px;
+    padding-bottom: 80px;
+    background-color: $bg;
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__about {
+        width: 50%;
+        padding-right: 40px;
+    }
+    &__logo {
+        max-width: 149px;
+        margin-bottom: 20px;
+    }
+    &__info {
+        max-width: 320px;
+        margin-bottom: 30px;
+        span,
+        a {
+            @include rubik-medium;
+        }
+    }
+    &__social {
+        line-height: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        &-link {
+            max-width: 35px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 2px solid transparent;
+            transition: all .4s;
+            &:hover {
+                border: 2px solid $accentColor;
+            }
+        }
+    }
+    &__policy {
+        color: #AFB5C0;
+        span {
+            @include rubik-medium;
+        }
+    }
+    &__column:not(:last-child) {
+        margin-right: 126px;
+    }
+    &__column {
+        max-width: 160px;
+    }
+    &__title {
+        @include rubik-medium;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    &__links {
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            width: 100%;
+            transition: all .4s;
+            &:hover {
+                color: $accentColor;
+            }
+        }
+    }
+}
+
+// end footer
 @import 'media';
