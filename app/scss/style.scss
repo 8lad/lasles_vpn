@@ -302,6 +302,7 @@
     padding-top: 60px;
     &__slider {
         padding-top: 40px;
+        padding-bottom: 120px;
     }
     &__slide {
         padding: 30px;
@@ -310,7 +311,6 @@
         transition: all .3s;
         max-width: 400px;
         min-height: 230px;
-        width: 100%;
         &:hover {
             border: 2px solid $accentColor;
         }
@@ -368,14 +368,63 @@
     &__comment {
         color: $mainText;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 26px;
     }
     ul.slick-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
         display: flex;
         justify-content: flex-start;
-        .presentation button {
-            font-size: 0px;
-            height: 0;
+        li {
+            button {
+                font-size: 0px;
+                width: 15px;
+                height: 15px;
+                background-color: #DDE0E4;
+                border-radius: 50%;
+                margin-right: 15px;
+                transition: all .7s;
+            }
+        }
+        li.slick-active {
+            button {
+                background-color: $accentColor;
+                width: 45px;
+                border-radius: 9px;
+            }
+        }
+    }
+    .slick-list {
+        padding: 0 21% 0 0;
+    }
+    .prev-arrow {
+        right: 80px;
+    }
+    .next-arrow {
+        right: 0;
+    }
+    .slider-arrows {
+        z-index: 5;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid $accentColor;
+        line-height: 0;
+        transition: all .4s;
+        position: absolute;
+        bottom: 0;
+        svg {
+            max-width: 25px;
+        }
+        &:hover {
+            background-color: $accentColor;
+            path {
+                fill: #fff;
+            }
         }
     }
 }
@@ -383,6 +432,7 @@
 // end customers
 // start subscribe
 .subscribe {
+    margin-top: -57px;
     transform: translateY(50%);
     .start__button {
         padding: 17px 65px;

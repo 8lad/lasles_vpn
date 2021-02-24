@@ -479,7 +479,8 @@ button {
 .customers {
   padding-top: 60px; }
   .customers__slider {
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-bottom: 120px; }
   .customers__slide {
     padding: 30px;
     border: 2px solid #DDDDDD;
@@ -488,8 +489,7 @@ button {
     -o-transition: all .3s;
     transition: all .3s;
     max-width: 400px;
-    min-height: 230px;
-    width: 100%; }
+    min-height: 230px; }
     .customers__slide:hover {
       border: 2px solid #F53838; }
   .customers__person {
@@ -558,8 +558,11 @@ button {
   .customers__comment {
     color: #0B132A;
     font-size: 16px;
-    line-height: 30px; }
+    line-height: 26px; }
   .customers ul.slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -568,11 +571,59 @@ button {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .customers ul.slick-dots .presentation button {
+    .customers ul.slick-dots li button {
       font-size: 0px;
-      height: 0; }
+      width: 15px;
+      height: 15px;
+      background-color: #DDE0E4;
+      border-radius: 50%;
+      margin-right: 15px;
+      -webkit-transition: all .7s;
+      -o-transition: all .7s;
+      transition: all .7s; }
+    .customers ul.slick-dots li.slick-active button {
+      background-color: #F53838;
+      width: 45px;
+      border-radius: 9px; }
+  .customers .slick-list {
+    padding: 0 21% 0 0; }
+  .customers .prev-arrow {
+    right: 80px; }
+  .customers .next-arrow {
+    right: 0; }
+  .customers .slider-arrows {
+    z-index: 5;
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    border: 2px solid #F53838;
+    line-height: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    position: absolute;
+    bottom: 0; }
+    .customers .slider-arrows svg {
+      max-width: 25px; }
+    .customers .slider-arrows:hover {
+      background-color: #F53838; }
+      .customers .slider-arrows:hover path {
+        fill: #fff; }
 
 .subscribe {
+  margin-top: -57px;
   -webkit-transform: translateY(50%);
       -ms-transform: translateY(50%);
           transform: translateY(50%); }
