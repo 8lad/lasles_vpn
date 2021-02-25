@@ -93,7 +93,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 200px;
+        padding-top: 67px;
+        padding-bottom: 68px;
+        flex-wrap: wrap;
     }
     &__item {
         width: 33%;
