@@ -7,7 +7,7 @@
     position: fixed;
     padding-bottom: 20px;
     padding-top: 50px;
-    z-index: 5;
+    z-index: 20;
     background-color: #fff;
     &__inner {
         display: flex;
@@ -296,6 +296,9 @@
         max-width: 190px;
         margin: 10px;
     }
+    .slick-slide {
+        text-align: center;
+    }
 }
 
 // end network
@@ -321,7 +324,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-right: 50px;
+        padding-right: 70px;
         position: relative;
         margin-bottom: 5px;
     }
@@ -357,6 +360,7 @@
         right: 0;
         top: 0;
         bottom: 0;
+        width: 50px;
     }
     &__number {
         margin-right: 10px;
