@@ -161,7 +161,7 @@ button {
 .header {
   width: 100%;
   position: fixed;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   padding-top: 50px;
   z-index: 20;
   background-color: #fff; }
@@ -179,7 +179,8 @@ button {
         -ms-flex-align: center;
             align-items: center; }
   .header__logo {
-    max-width: 150px; }
+    max-width: 150px;
+    line-height: 0; }
   .header__sign button {
     font-family: 'Rubik-Medium', sans-serif;
     font-weight: 500;
@@ -199,6 +200,23 @@ button {
     transition: all .5s; }
     .header__sign-in:hover {
       color: #F53838; }
+  .header__sign-icon {
+    display: none; }
+  .header__menu-btn {
+    display: none;
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+    cursor: pointer; }
+    .header__menu-btn div {
+      width: 100%;
+      height: 3px;
+      background-color: #000; }
+    .header__menu-btn div:not(:last-child) {
+      margin-bottom: 10px; }
+
+.header.active {
+  border-bottom: 2px solid #dedede; }
 
 .menu {
   font-size: 16px;
@@ -207,6 +225,12 @@ button {
     display: inline-block; }
   .menu__item + .menu__item {
     margin-left: 40px; }
+  .menu .menu__close {
+    position: absolute;
+    top: 25px;
+    max-width: 25px;
+    right: 40px;
+    cursor: pointer; }
 
 .main {
   margin-top: 120px;
@@ -752,6 +776,87 @@ button {
     .footer__links a:hover {
       color: #F53838; }
 
+.sign {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sign__inner {
+    position: relative;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px; }
+    .sign__inner fieldset {
+      border: none; }
+  .sign__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 40px; }
+    .sign__close img {
+      width: 20px; }
+  .sign .section__title,
+  .sign .section__descr {
+    text-align: center;
+    max-width: 100%; }
+  .sign form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .sign form label,
+    .sign form input {
+      width: 48%;
+      margin-bottom: 20px; }
+    .sign form input {
+      padding-left: 7px;
+      padding-right: 7px;
+      min-height: 30px; }
+  .sign__btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 35px; }
+
+.sign-in,
+.sign-up {
+  display: none; }
+
+.sign-in.active,
+.sign-up.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 @media (max-width: 1280px) {
   .footer__column:not(:last-child) {
     margin-right: 60px; }
@@ -796,6 +901,8 @@ button {
     height: 50px; } }
 
 @media (max-width: 1024px) {
+  .main {
+    padding-top: 90px; }
   .footer__inner {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -807,6 +914,51 @@ button {
     width: 100%; }
   .footer__column {
     margin-bottom: 30px; }
+  .menu {
+    position: fixed;
+    width: 100%;
+    left: -110%;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    color: #fff;
+    padding-top: 90px;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+  .menu.active {
+    left: 0; }
+  .menu__list {
+    text-align: center; }
+  .menu__item + .menu__item {
+    margin-left: 0px; }
+  .menu__item {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 35px; }
+  .header__menu-btn {
+    display: block; }
+  .header {
+    padding-top: 40px; }
+  .header__sign {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+@media (max-width: 991px) {
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px; }
   .main {
     padding-top: 0; }
   .main__inner {
@@ -890,6 +1042,14 @@ button {
     text-align: left; } }
 
 @media (max-width: 800px) {
+  .header__menu-btn {
+    width: 35px;
+    height: 24px; }
+  .header__menu-btn div:not(:last-child) {
+    margin-bottom: 8px; }
+  .header__sign-up {
+    padding: 7px 25px;
+    margin-left: 20px; }
   .features {
     padding-bottom: 20px; }
   .features__inner {
@@ -941,6 +1101,17 @@ button {
     line-height: 45px; } }
 
 @media (max-width: 568px) {
+  .header__sign-up,
+  .header__sign-in {
+    display: none; }
+  .header__sign-icon {
+    cursor: pointer;
+    display: block;
+    line-height: 0; }
+    .header__sign-icon img {
+      width: 25px; }
+  .header__logo {
+    max-width: 130px; }
   .subscribe__inner {
     padding: 30px; }
   .subscribe .start__button {
@@ -952,7 +1123,12 @@ button {
     line-height: 40px; }
   .slick-slide {
     padding-right: 10px;
-    padding-left: 10px; } }
+    padding-left: 10px; }
+  .sign form label,
+  .sign form input {
+    width: 75%; }
+  .sign__inner {
+    max-width: 380px; } }
 
 @media (max-width: 480px) {
   .main__title {
@@ -1000,9 +1176,13 @@ button {
     padding-left: 0px;
     padding-right: 0px; }
   .main .start__button {
-    padding: 12px 40px; } }
+    padding: 12px 40px; }
+  .sign__inner {
+    padding: 40px 15px; } }
 
 @media (max-width: 384px) {
+  .header__logo {
+    max-width: 120px; }
   .footer__info {
     max-width: 100%; }
   .footer__about {

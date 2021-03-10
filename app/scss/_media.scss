@@ -66,6 +66,9 @@
 }
 
 @media(max-width: 1024px) {
+    .main {
+        padding-top: 90px;
+    }
     .footer__inner {
         flex-wrap: wrap;
     }
@@ -78,6 +81,50 @@
     }
     .footer__column {
         margin-bottom: 30px;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        left: -110%;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        color: #fff;
+        padding-top: 90px;
+        transition: all 1s;
+    }
+    .menu.active {
+        left: 0;
+    }
+    .menu__list {
+        text-align: center;
+    }
+    .menu__item+.menu__item {
+        margin-left: 0px;
+    }
+    .menu__item {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .header__menu-btn {
+        display: block;
+    }
+    .header {
+        padding-top: 40px;
+    }
+    .header__sign {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 991px) {
+    .header {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .main {
         padding-top: 0;
@@ -99,8 +146,6 @@
         padding-top: 0;
     }
 }
-
-@media(max-width: 991px) {}
 
 @media(max-width: 900px) {
     .subscribe__inner {
@@ -169,6 +214,17 @@
 }
 
 @media(max-width: 800px) {
+    .header__menu-btn {
+        width: 35px;
+        height: 24px;
+    }
+    .header__menu-btn div:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .header__sign-up {
+        padding: 7px 25px;
+        margin-left: 20px;
+    }
     .features {
         padding-bottom: 20px;
     }
@@ -235,6 +291,21 @@
 @media(max-width: 598px) {}
 
 @media(max-width: 568px) {
+    .header__sign-up,
+    .header__sign-in {
+        display: none;
+    }
+    .header__sign-icon {
+        cursor: pointer;
+        display: block;
+        line-height: 0;
+        img {
+            width: 25px;
+        }
+    }
+    .header__logo {
+        max-width: 130px;
+    }
     .subscribe__inner {
         padding: 30px;
     }
@@ -251,6 +322,13 @@
     .slick-slide {
         padding-right: 10px;
         padding-left: 10px;
+    }
+    .sign form label,
+    .sign form input {
+        width: 75%;
+    }
+    .sign__inner {
+        max-width: 380px;
     }
 }
 
@@ -304,9 +382,15 @@
     .main .start__button {
         padding: 12px 40px;
     }
+    .sign__inner {
+        padding: 40px 15px;
+    }
 }
 
 @media(max-width: 384px) {
+    .header__logo {
+        max-width: 120px;
+    }
     .footer__info {
         max-width: 100%;
     }
